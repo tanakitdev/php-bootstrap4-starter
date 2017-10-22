@@ -1,0 +1,23 @@
+{
+  "name": "php_starter",
+  "version": "1.0.0",
+  "description": "PHP Bootstrap 4 starter",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "font-awesome": "^4.7.0",
+    "fontawesome": "^4.7.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.6"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Tanakit Nitijunya",
+  "license": "MIT"
+}
