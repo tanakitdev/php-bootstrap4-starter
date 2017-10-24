@@ -7,14 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css"">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="../css/font-awesome.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
 	<?php include_once("../partials/header.php"); ?>
-    <div class="container">
+    <div class="container-fluid">
+      <div class="row">
+
+      </div>
       <?php
         $page = isset($_GET["page"]) ? $_GET["page"] : null;
          if($page){
