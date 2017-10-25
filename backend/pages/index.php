@@ -1,23 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
+<?php
+include_once('../config/database.php');
+?>
 <html lang="en">
-  <head>
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>Backend Dashboard</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Font-Awesome -->
-    <link rel="stylesheet" href="../css/font-awesome.css">
-    <link rel="stylesheet" href="../css/style.css">
-  </head>
-  <body>
-	<?php include_once("../partials/header.php"); ?>
-    <div class="container-fluid">
-      <div class="row">
+<body>
 
-      </div>
+<?php include_once("../shared/header.php"); ?>
       <?php
         $page = isset($_GET["page"]) ? $_GET["page"] : null;
          if($page){
@@ -30,15 +28,18 @@
       	include_once("dashboard.php");
         }
       ?>
-    </div>
 
 
-  <?php include_once("../partials/footer.php"); ?>
+  <?php include_once("../shared/footer.php"); ?>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../js/jquery-slim.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-  </body>
+    <script src="../assets/js/jquery-slim.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
+    
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+</body>
+
 </html>
