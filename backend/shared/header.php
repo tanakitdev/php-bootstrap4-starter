@@ -23,7 +23,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown mr-3">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-user">Welcome Brand</i>
+                    <i class="fa fa-user">Welcome John, Nick</i>
                 </a>
                 <div class="dropdown-menu">
                     <a href="index.php?page=users/profile" class="dropdown-item">

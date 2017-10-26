@@ -10,7 +10,7 @@
     </header>
 
     <!-- Action -->
-    <section id="acttion" class="py-4 mb-4 bg-light">
+    <!-- <section id="acttion" class="py-4 mb-4 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 ml-auto">
@@ -23,107 +23,55 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- POSTS -->
     <section id="posts">
-        <div class="container">
+        <div class="container py-4">
             <div class="row">
                 <div class="col">
                     <div class="card">
-                        <div class="card-header">
+                        <div class="card-header mb-3">
                             <h4>Latest Posts</h4>
                         </div>
-                        <table class="table table-striped">
+                        <table id="example" class="table table-hover table-striped dt-responsive" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Title</th>
-                                    <th>Category</th>
-                                    <th>Date Posted</th>
+                                    <th>Post_ID</th>
+                                    <th>POST_TITLE</th>
+                                    <th>POST_DESC</th>
+                                    <th>POST_CREATED</th>
+                                    <th>POST_UPDATED</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php
+                                $query_posts = "SELECT * FROM tb_posts ORDER BY post_id DESC";
+                                $result_posts = $mysqli->query($query_posts);
+                                while ($row = mysqli_fetch_array($result_posts, MYSQLI_ASSOC)) {
+                                ?>
                                 <tr>
-                                    <td scope="row">1</td>
-                                    <td>Post One</td>
-                                    <td>Web Development</td>
-                                    <td>July 12, 2017</td>
+                                    <td><?php echo $row['post_id'];?></td>
+                                    <td><?php echo $row['post_title'];?></td>
+                                    <td><?php echo $row['post_desc'];?></td>
+                                    <td><?php echo $row['post_created_at'];?></td>
+                                    <td><?php echo $row['post_updated_at'];?></td>
                                     <td>
-                                        <a href="index.php?page=posts/view" class="btn btn-secondary">
+                                        <a href="index.php?page=posts/view&post_id=<?php echo $row['post_id'];?>" class="btn btn-secondary">
                                             <i class="fa fa-angle-double-right"></i> Details
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td scope="row">2</td>
-                                    <td>Post Two</td>
-                                    <td>Tech Gadgets</td>
-                                    <td>July 12, 2017</td>
-                                    <td>
-                                        <a href="index.php?page=posts/view" class="btn btn-secondary">
-                                            <i class="fa fa-angle-double-right"></i> Details
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">3</td>
-                                    <td>Post Three</td>
-                                    <td>Business</td>
-                                    <td>July 12, 2017</td>
-                                    <td>
-                                        <a href="index.php?page=posts/view" class="btn btn-secondary">
-                                            <i class="fa fa-angle-double-right"></i> Details
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">4</td>
-                                    <td>Post Four</td>
-                                    <td>Health & Wellness</td>
-                                    <td>July 12, 2017</td>
-                                    <td>
-                                        <a href="index.php?page=posts/view" class="btn btn-secondary">
-                                            <i class="fa fa-angle-double-right"></i> Details
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">5</td>
-                                    <td>Post Five</td>
-                                    <td>Web Development</td>
-                                    <td>July 12, 2017</td>
-                                    <td>
-                                        <a href="index.php?page=posts/view" class="btn btn-secondary">
-                                            <i class="fa fa-angle-double-right"></i> Details
-                                        </a>
-                                    </td>
-                                </tr>
+                                <?php
+                                }
+                                ?>
                             </tbody>
                         </table>
-
-                        <nav class="ml-4">
-                            <ul class="pagination">
-                                <li class="page-item disabled">
-                                    <a href="#" class="page-link">Previous</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a href="#" class="page-link">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    

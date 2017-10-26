@@ -34,7 +34,7 @@
                         <div class="card-header">
                             <h4>Latest Users</h4>
                         </div>
-                        <table class="table table-striped">
+                        <table id="example" class="table table-hover table-striped dt-responsive" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
                                     <th>#</th>
