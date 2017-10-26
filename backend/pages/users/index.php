@@ -46,7 +46,7 @@
                                 <tr>
                                     <td scope="row">1</td>
                                     <td>John Nick</td>
-                                    <td>J_Nick@gmail.com</td>
+                                    <td>tanakit.dev@gmail.com</td>
                                 </tr>
                                 <tr>
                                     <td scope="row">2</td>

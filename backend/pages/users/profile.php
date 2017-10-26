@@ -44,11 +44,11 @@
               <form>
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control" value="Brad Traversy">
+                  <input type="text" class="form-control" value="John Nick">
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="text" class="form-control" value="test@test.com">
+                  <input type="text" class="form-control" value="tanakit.dev@gmail.com">
                 </div>
                 <div class="form-group">
                   <label for="body">Bio</label>
